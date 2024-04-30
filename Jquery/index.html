@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="js/jquery.js"></script>
+
+    <script>
+        $("document").ready(function() { 
+            $(".highlight").hover(thecopy);
+            
+            function thecopy(){
+                $(this).toggleClass("new");
+            }
+        });
+    </script>
+    <script>
+        $("document").ready(function(){
+            $(".tony").click(function(){
+                $(".tony").hide();
+            })
+        });
+    </script>
+    <style>
+        .new{
+            background: #ff0000;
+        }
+    </style>
+    <script>
+        $("document").ready(function() {
+            $(".but").on("click", perfom);
+            function perfom(){
+                alert("Hello Tony");
+            }
+        });
+
+        $(document).ready(function(){
+            $(".but1").click(function(){
+                $("p").html("Hello <b>Javatpoint.com</b>");  
+            });
+        });  
+    </script>
+    <script>
+        $("document").ready(function(){
+            $("#rad").click(function(){
+                $(".txt").show();
+            })
+        });
+    </script>
+
+    <script>
+        $("document").ready(function(){
+            $(".one").fadeIn();
+            $(".two").fadeOut(4);
+            $(".three").fadeIn(5);
+        });
+
+        $("document").ready(function(){
+            $(".sen").toggle();
+    });
+    </script>
+    <style>
+        .newCls, #cls{
+            padding: 5px;
+            text-align: center;
+            background-color:cyan;
+            border: solid 1px #c3c3c3;
+        }
+
+        .newCls{
+            padding: 50px;
+        }
+
+        .newCls1, #cls1{
+            padding: 5px;
+            text-align: center;
+            background-color:blue;
+            border: solid 1px #c3c3c3;
+        }
+
+        .newCls1{
+            padding: 50px;
+        }
+
+        .newCls2, #cls2{
+            padding: 5px;
+            text-align: center;
+            background-color:chartreuse;
+            border: solid 1px #c3c3c3;
+        }
+
+        .newCls2{
+            padding: 50px;
+        }
+    </style>
+    <script>
+        $("document").ready(function(){
+            $("#cls").click(function() {
+                $(".newCls").slideDown("slow")
+            });
+        });
+
+        $("document").ready(function(){
+            $("#cls1").click(function() {
+                $(".newCls1").slideUp("slow")
+            });
+        });
+
+        $("document").ready(function(){
+            $("#cls2").click(function() {
+                $(".newCls2").slideToggle("slow")
+            });
+        });
+    </script>
+
+    <style>
+        .dev{
+            width: 50px;
+            height: 50px;
+            background-color: #ff0000;
+            position: absolute;
+           
+        }
+    </style>
+
+    <script>
+        $("document").ready(function(){
+            $(".newBut").click(function(){
+                $(".dev").animate({left:'450px'});   
+            });
+        });
+    </script>
+    </head> 
+<body>
+    <h1 class="sen">Hello Mr</h1>
+    <p class="highlight">Am a fullstack web developer highly skilled in backend developer</p>
+    <h1 class="tony">Anthony just clicked me</h1>
+    <input type="password" class="txt">
+    <input type="checkbox" id="rad"></br>
+    <button class="but">submit</button>
+    <button class="but1">login</button>
+
+    <div class="one">option one</div>
+    <div class="two">option two</div>
+    <div class="three">option three</div>
+
+    <div id="cls">Click me to slide 1</div>
+    <div class="newCls">
+        Currently pursuing bachelor of science in statistics and information technology
+        and certificate in software engineering.
+    </div></br>
+
+    <div id="cls1">Click me to slide 2</div>
+    <div class="newCls1">
+        Currently pursuing bachelor of science in statistics and information technology
+        and certificate in software engineering.
+    </div></br>
+
+    <div id="cls2">Click me to slide 3</div>
+    <div class="newCls2">
+        Currently pursuing bachelor of science in statistics and information technology
+        and certificate in software engineering.
+    </div></br>
+
+    <button class="newBut">Animate</button></br>
+    <div class="dev"></div>
+</body>
+</html>
