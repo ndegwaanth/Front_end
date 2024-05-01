@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery/html/css</title>
+    <script src="js/jquery.js"></script>
+
+    <!--Jquerry html/css-->
+    <!--Html()-->
+    <script>
+    $("document").ready(function(){
+      $(".but").click(function(){
+        $(".psg").html("<h1>Am very fine Thank you</h1>");
+      })
+    });
+    </script>
+    <!--Text()-->
+    <script>
+    $("document").ready(function(){
+        $(".sub").click(function(){
+            $(".psg").text("Hello Anthony")
+        })
+    })
+    </script>
+    <!--Val()-->
+    <script>
+        function displayVal(){
+            var singleVal = $(".sel").val();
+            $("h1").html("<br>Value:</br>"+singleVal);
+            $("document").ready(function(){
+                $(".cls").click(function(){
+                    $("h1").html("<h1><b>Value:</b></h1>"+singleVal);
+                })
+            });
+        }
+        $("select").change(displayVal());
+        displayVal();
+    </script>
+    
+    <!--before()-->
+    <script>
+        $("document").ready(function(){
+            $(".but3").click(function(){
+                $("h2").before("<h2>Forward to the next paragraph</h2>");
+            })
+        });
+    </script>
+    <!--Prepend()-->
+    <script>
+        $("document").ready(function(){
+            $("#but4").click(function(){
+                $("h3").prepend("<h3><h2>Prepend Text:</h2>This is the first paragraph</h3>");
+            })
+        });
+    </script>
+
+    <!--Append()-->
+    <script>
+        $("document").ready(function(){
+            $("#but5").click(function(){
+                $("h3").append("<h3><h3>append Text:</h3>This is the first paragraph</h3>");
+            })
+        });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        $("but6").click(function(){
+            alert($("div").scrollTop());
+        });
+    });  
+    </script>
+</head>
+<body>
+    <h3>Hello Tony</h3>
+    <h2>Currently engaged in Bachelor of science in statistics</h2>
+    <h1></h1>
+    <p class="psg">Hello Mr yatoshi?</p>
+    <div style="border:1px solid black;width:150px;height:100px;overflow:auto">  
+        Twinkle, twinkle, little star,How I wonder what you are!  
+        Up above the world so high, Like a diamond in the sky.   
+        Twinkle, twinkle, little star, How I wonder what you are!
+    </div><br>  
+
+    <select class="sel">
+        <option>single</option>
+        <option>Married</option>
+        <option>Divorced</option>
+    </select>
+    <form action="">
+        <input type="text" name="FirstName" value="myname">
+        <input type="text" name="LastName" value="hername">
+    </form>
+    <script>
+        $("document").ready(function(){
+            $(".but7").click(function(){
+                $("div").text($("form").serialize());
+            });
+        });
+    </script>
+
+    <button class="but">click</button>
+    <button class="sub">submit</button>
+    <button class="cls">choose</button>
+    <button class="but3">before</button>
+    <button id="but4">prepend</button>
+    <button id="but5">append</button>
+    <button class="but6">scrollbar</button>
+    <button class="but7">serialize</button>
+</body>
+</html>
