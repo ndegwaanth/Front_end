@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<script>
+    $("document").ready(function(){
+        $(".but").click(function(){
+            var xhl = new XMLHttpRequest();
+            xhl.open('GET', 'sample.txt', true)
+            xhl.onload = function(){
+                if(this.status == 200){
+                    document.getElementById("#tob").innerHTML = this.responseText;
+                }
+            }
+            
+            xhl.send();
+        });
+    });
+</script>
+
+wide_long <- pivot_longer(
+  data = airquality,
+  cols = c(Ozone, Solar.R, Wind, Temp),
+  names_to = "name",
+  values_to = "value"
+)

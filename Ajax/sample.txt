@@ -1,0 +1,1 @@
+jQuery change event occurs when the value of an element is changed. It works only on form fields. When the change event occurs, the change () method attaches a function with it to run.
